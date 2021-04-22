@@ -1,0 +1,95 @@
+<div class="forabg">
+    <div class="inner">
+        {{-- <ul class="topiclist">
+            <li class="header">
+                <dl class="icon">
+                    <dt><div class="list-inner">Topic</div></dt>
+                    <dd class="posts">Posts</dd>
+                    <dd class="lastpost"><span>Last post</span></dd>
+                </dl>
+            </li>
+        </ul> --}}
+        <ul class="topiclist forums">
+            @foreach($topics as $topic)
+            {{-- try  --}}
+            <div class="item ">
+                <div class="image">
+                <div>
+                    <img src="{{ $topic->creator->profile_small_picture_url }}" />
+                    {{-- <img class="avatar" src="{{ $post->author->profile_picture_url }}" alt="Profile picture" width="80" height="80"> --}}
+                    {{-- <a href="{{ route('profile') }}" role="menuitem"><img  src="{{ $_user->profile_small_picture_url }}" /> {{ $_user->user_name }}</a> --}}
+                    {{-- <a href="{{ route('profile') }}" role="menuitem"><img src="{{ $_user->profile_small_picture_url }}" /> {{ $_user->user_name }}</a> --}}
+                    <span>
+                        <a href="{{ route('profile', $topic->creator->id) }}">{{ $topic->creator->user_name }}
+                    </span>
+                </div>
+                </div>
+                <div class="details">
+                <div>
+                    <h1><a href="{{ route('topic', $topic->id) }}" class="forumtitle">{{ $topic->title }}</a><br /></h1>
+                   
+                </div>
+                @if(count($topic->posts) > 0)
+                    <span>
+                        {{ $topic->last_post->created_at->format('d M Y, H:i') }}<br />
+                        {{-- by <a href="{{ route('profile', $topic->last_post->author->id) }}" class="username-coloured">{{ $topic->last_post->author->user_name }}</a> --}}
+                        {{-- <a href="{{ route('profile') }}" role="menuitem"><img src="{{ $_user->profile_small_picture_url }}" /> {{ $_user->user_name }}</a> --}}
+                    </span>
+                    @endif
+                </div>
+            </div>
+            {{-- ?try --}}
+            {{-- <li class="row">
+                <dl class="icon"> --}}
+                    {{-- <dt >
+                        <div>
+                            <div>
+
+                            </div>
+                            <div>
+                                <div >
+                                    <span class="creator-img "> <img src="{{ $topic->creator->profile_small_picture_url }}" />
+                                        
+                                            <span class="topic-by"> <a href="{{ route('profile', $topic->creator->id) }}">{{ $topic->creator->user_name }}</a></span>
+                                            <span class="topic-by">          
+                                        </span>
+                                    <span>
+                                        
+                                    </span>
+                                   
+                                    
+                                        
+                                    
+                                </div>
+                                
+                                
+                                
+                                
+                            </div>
+                           <div style="margin-left: 60px;">
+                            
+                           </div>
+                        </div>
+                        <div class="list-inner">
+                            <a href="{{ route('topic', $topic->id) }}" class="forumtitle">{{ $topic->title }}</a><br />
+                            
+                            <div class="responsive-show" style="display: none;">
+                                Topics: <strong>{{ count($topic->posts) }}</strong>
+                            </div>
+                        </div>
+                    </dt> --}}
+                    {{-- <dd class="posts">{{ count($topic->posts) }}</dd>
+                    <dd class="lastpost">
+                        @if(count($topic->posts) > 0)
+                        <span>
+                            {{ $topic->last_post->created_at->format('d M Y, H:i') }}<br />
+                            by <a href="{{ route('profile', $topic->last_post->author->id) }}" class="username-coloured">{{ $topic->last_post->author->user_name }}</a>
+                        </span>
+                        @endif
+                    </dd> --}}
+                {{-- </dl>
+            </li> --}}
+            @endforeach
+        </ul>
+    </div>
+</div>
