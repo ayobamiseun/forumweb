@@ -73,5 +73,5 @@ To run the test cases for Laravel open a command line prompt, go to the project 
 Laravel tests for response codes on the different URLs and views display.
 
 Future Improvement. 
-## 1. Like Botton 
-## 2. Comments Botton 
+## 1. Like Button  
+## 2. Comments Button
