@@ -15,7 +15,7 @@
 ## 1. General description
 This forum was developed using PHP7, Laravel 5.5, Bootstrap 4 and jQuery 3.2
 
-Has the basic functions of a forum and was developed as a programming test for VanHack, but can easily be extended and adapted to meet any forum needs.
+Has the basic functions of a forum and was developed for personal assessment, but can easily be extended and adapted to meet any forum needs.
 
 <a name="installation"></a>
 ## 2. Installation
