@@ -19,7 +19,7 @@ Has the basic functions of a forum and was developed as a programming test for V
 
 <a name="installation"></a>
 ## 2. Installation
-1. Clone the repository (https://github.com/AngelGris/laravel-forum)
+1. Clone the repository (https://github.com/ayobamiseun/forumweb)
 2. Create an empty database for this project in your database engine.
 3. Configure the database connection in config/database.php file.
 4. Copy or rename .env.example file to .env and change the database connection configuration there too. Optionally, the application name can be set in the .env file too. (If the application name has more than one word it’s required to enclose them in quotes, i.e. APP_NAME=“My App”)
@@ -62,7 +62,7 @@ The results are shown highlighting the words that match your keyword and group i
 
 <a name="webInterfaceOnlineDemo"></a>
 ### Online demo
-An online demo can be found at http://35.163.165.1:8080/
+
 
 <a name="testing"></a>
 ## 4. Testing
