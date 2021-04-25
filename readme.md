@@ -1,4 +1,4 @@
-# Laravel 5 Forum
+# Forum Laravel
 
 ## Summary
 1. [General dsescription](#generalDescription)
